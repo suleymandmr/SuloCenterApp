@@ -14,6 +14,12 @@
 		101F5E542A6E7E7700CFAB66 /* SuloCenterApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 101F5E522A6E7E7700CFAB66 /* SuloCenterApp.xcdatamodeld */; };
 		101F5E562A6E7E7900CFAB66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 101F5E552A6E7E7900CFAB66 /* Assets.xcassets */; };
 		101F5E592A6E7E7900CFAB66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101F5E572A6E7E7900CFAB66 /* LaunchScreen.storyboard */; };
+		101F5E632A6E8C2200CFAB66 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 101F5E622A6E8C2200CFAB66 /* GoogleService-Info.plist */; };
+		101F5E652A6E8D2D00CFAB66 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101F5E642A6E8D2D00CFAB66 /* MainViewController.swift */; };
+		101F5E672A6E8D5C00CFAB66 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101F5E662A6E8D5C00CFAB66 /* NavigationViewController.swift */; };
+		101F5E692A6E8D7400CFAB66 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101F5E682A6E8D7300CFAB66 /* ProfileViewController.swift */; };
+		101F5E6B2A6E93DF00CFAB66 /* NewProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101F5E6A2A6E93DF00CFAB66 /* NewProfileViewController.swift */; };
+		A313961C6D1F1426FDEAB52A /* Pods_SuloCenterApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E609927D15430F26BEE5589 /* Pods_SuloCenterApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,14 @@
 		101F5E552A6E7E7900CFAB66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		101F5E582A6E7E7900CFAB66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		101F5E5A2A6E7E7900CFAB66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		101F5E622A6E8C2200CFAB66 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		101F5E642A6E8D2D00CFAB66 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		101F5E662A6E8D5C00CFAB66 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		101F5E682A6E8D7300CFAB66 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		101F5E6A2A6E93DF00CFAB66 /* NewProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfileViewController.swift; sourceTree = "<group>"; };
+		6E609927D15430F26BEE5589 /* Pods_SuloCenterApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuloCenterApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7040B9ABA5EC4A567E761F87 /* Pods-SuloCenterApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuloCenterApp.debug.xcconfig"; path = "Target Support Files/Pods-SuloCenterApp/Pods-SuloCenterApp.debug.xcconfig"; sourceTree = "<group>"; };
+		DC174F820045351622D5AF8A /* Pods-SuloCenterApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuloCenterApp.release.xcconfig"; path = "Target Support Files/Pods-SuloCenterApp/Pods-SuloCenterApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A313961C6D1F1426FDEAB52A /* Pods_SuloCenterApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +59,8 @@
 			children = (
 				101F5E482A6E7E7700CFAB66 /* SuloCenterApp */,
 				101F5E472A6E7E7700CFAB66 /* Products */,
+				3731E4A2153B15DE755DD86C /* Pods */,
+				F7246B107C9DD2F90AEF8844 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,10 +81,32 @@
 				101F5E4F2A6E7E7700CFAB66 /* Main.storyboard */,
 				101F5E552A6E7E7900CFAB66 /* Assets.xcassets */,
 				101F5E572A6E7E7900CFAB66 /* LaunchScreen.storyboard */,
+				101F5E622A6E8C2200CFAB66 /* GoogleService-Info.plist */,
 				101F5E5A2A6E7E7900CFAB66 /* Info.plist */,
 				101F5E522A6E7E7700CFAB66 /* SuloCenterApp.xcdatamodeld */,
+				101F5E642A6E8D2D00CFAB66 /* MainViewController.swift */,
+				101F5E662A6E8D5C00CFAB66 /* NavigationViewController.swift */,
+				101F5E682A6E8D7300CFAB66 /* ProfileViewController.swift */,
+				101F5E6A2A6E93DF00CFAB66 /* NewProfileViewController.swift */,
 			);
 			path = SuloCenterApp;
+			sourceTree = "<group>";
+		};
+		3731E4A2153B15DE755DD86C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7040B9ABA5EC4A567E761F87 /* Pods-SuloCenterApp.debug.xcconfig */,
+				DC174F820045351622D5AF8A /* Pods-SuloCenterApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F7246B107C9DD2F90AEF8844 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E609927D15430F26BEE5589 /* Pods_SuloCenterApp.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +116,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 101F5E5D2A6E7E7900CFAB66 /* Build configuration list for PBXNativeTarget "SuloCenterApp" */;
 			buildPhases = (
+				0C4915986C6B844C6C59BCA7 /* [CP] Check Pods Manifest.lock */,
 				101F5E422A6E7E7700CFAB66 /* Sources */,
 				101F5E432A6E7E7700CFAB66 /* Frameworks */,
 				101F5E442A6E7E7700CFAB66 /* Resources */,
+				68C1B4DC127D1DE6F473F4A6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				101F5E592A6E7E7900CFAB66 /* LaunchScreen.storyboard in Resources */,
+				101F5E632A6E8C2200CFAB66 /* GoogleService-Info.plist in Resources */,
 				101F5E562A6E7E7900CFAB66 /* Assets.xcassets in Resources */,
 				101F5E512A6E7E7700CFAB66 /* Main.storyboard in Resources */,
 			);
@@ -136,15 +178,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0C4915986C6B844C6C59BCA7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SuloCenterApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68C1B4DC127D1DE6F473F4A6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SuloCenterApp/Pods-SuloCenterApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SuloCenterApp/Pods-SuloCenterApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SuloCenterApp/Pods-SuloCenterApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		101F5E422A6E7E7700CFAB66 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				101F5E672A6E8D5C00CFAB66 /* NavigationViewController.swift in Sources */,
 				101F5E4E2A6E7E7700CFAB66 /* ViewController.swift in Sources */,
 				101F5E4A2A6E7E7700CFAB66 /* AppDelegate.swift in Sources */,
+				101F5E6B2A6E93DF00CFAB66 /* NewProfileViewController.swift in Sources */,
 				101F5E4C2A6E7E7700CFAB66 /* SceneDelegate.swift in Sources */,
+				101F5E692A6E8D7400CFAB66 /* ProfileViewController.swift in Sources */,
 				101F5E542A6E7E7700CFAB66 /* SuloCenterApp.xcdatamodeld in Sources */,
+				101F5E652A6E8D2D00CFAB66 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +374,7 @@
 		};
 		101F5E5E2A6E7E7900CFAB66 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7040B9ABA5EC4A567E761F87 /* Pods-SuloCenterApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -314,6 +403,7 @@
 		};
 		101F5E5F2A6E7E7900CFAB66 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC174F820045351622D5AF8A /* Pods-SuloCenterApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

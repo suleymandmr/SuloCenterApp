@@ -19,6 +19,10 @@
 		101F5E672A6E8D5C00CFAB66 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101F5E662A6E8D5C00CFAB66 /* NavigationViewController.swift */; };
 		101F5E692A6E8D7400CFAB66 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101F5E682A6E8D7300CFAB66 /* ProfileViewController.swift */; };
 		101F5E6B2A6E93DF00CFAB66 /* NewProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101F5E6A2A6E93DF00CFAB66 /* NewProfileViewController.swift */; };
+		104F05D02A6FED3800D3AF34 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104F05CF2A6FED3800D3AF34 /* Main.swift */; };
+		10A75CD02A712BA300CB92D7 /* HakkindaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A75CCF2A712BA300CB92D7 /* HakkindaViewController.swift */; };
+		10A75CD42A7145FA00CB92D7 /* hakkimizda2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A75CD32A7145FA00CB92D7 /* hakkimizda2ViewController.swift */; };
+		10C7BAAE2A6FC205009B375B /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C7BAAD2A6FC205009B375B /* MainCell.swift */; };
 		A313961C6D1F1426FDEAB52A /* Pods_SuloCenterApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E609927D15430F26BEE5589 /* Pods_SuloCenterApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +41,10 @@
 		101F5E662A6E8D5C00CFAB66 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		101F5E682A6E8D7300CFAB66 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		101F5E6A2A6E93DF00CFAB66 /* NewProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfileViewController.swift; sourceTree = "<group>"; };
+		104F05CF2A6FED3800D3AF34 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		10A75CCF2A712BA300CB92D7 /* HakkindaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HakkindaViewController.swift; sourceTree = "<group>"; };
+		10A75CD32A7145FA00CB92D7 /* hakkimizda2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hakkimizda2ViewController.swift; sourceTree = "<group>"; };
+		10C7BAAD2A6FC205009B375B /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		6E609927D15430F26BEE5589 /* Pods_SuloCenterApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuloCenterApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7040B9ABA5EC4A567E761F87 /* Pods-SuloCenterApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuloCenterApp.debug.xcconfig"; path = "Target Support Files/Pods-SuloCenterApp/Pods-SuloCenterApp.debug.xcconfig"; sourceTree = "<group>"; };
 		DC174F820045351622D5AF8A /* Pods-SuloCenterApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuloCenterApp.release.xcconfig"; path = "Target Support Files/Pods-SuloCenterApp/Pods-SuloCenterApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -75,21 +83,57 @@
 		101F5E482A6E7E7700CFAB66 /* SuloCenterApp */ = {
 			isa = PBXGroup;
 			children = (
+				10A75CCC2A712B5A00CB92D7 /* Hakkinda */,
+				10A75CCB2A71127600CB92D7 /* Navigation */,
+				10A75CCA2A71126100CB92D7 /* Main */,
+				10A75CC92A71123700CB92D7 /* Controller */,
 				101F5E492A6E7E7700CFAB66 /* AppDelegate.swift */,
 				101F5E4B2A6E7E7700CFAB66 /* SceneDelegate.swift */,
-				101F5E4D2A6E7E7700CFAB66 /* ViewController.swift */,
 				101F5E4F2A6E7E7700CFAB66 /* Main.storyboard */,
 				101F5E552A6E7E7900CFAB66 /* Assets.xcassets */,
 				101F5E572A6E7E7900CFAB66 /* LaunchScreen.storyboard */,
 				101F5E622A6E8C2200CFAB66 /* GoogleService-Info.plist */,
 				101F5E5A2A6E7E7900CFAB66 /* Info.plist */,
 				101F5E522A6E7E7700CFAB66 /* SuloCenterApp.xcdatamodeld */,
-				101F5E642A6E8D2D00CFAB66 /* MainViewController.swift */,
-				101F5E662A6E8D5C00CFAB66 /* NavigationViewController.swift */,
-				101F5E682A6E8D7300CFAB66 /* ProfileViewController.swift */,
-				101F5E6A2A6E93DF00CFAB66 /* NewProfileViewController.swift */,
 			);
 			path = SuloCenterApp;
+			sourceTree = "<group>";
+		};
+		10A75CC92A71123700CB92D7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				101F5E4D2A6E7E7700CFAB66 /* ViewController.swift */,
+				101F5E6A2A6E93DF00CFAB66 /* NewProfileViewController.swift */,
+				101F5E682A6E8D7300CFAB66 /* ProfileViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		10A75CCA2A71126100CB92D7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				104F05CF2A6FED3800D3AF34 /* Main.swift */,
+				10C7BAAD2A6FC205009B375B /* MainCell.swift */,
+				101F5E642A6E8D2D00CFAB66 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		10A75CCB2A71127600CB92D7 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				101F5E662A6E8D5C00CFAB66 /* NavigationViewController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		10A75CCC2A712B5A00CB92D7 /* Hakkinda */ = {
+			isa = PBXGroup;
+			children = (
+				10A75CCF2A712BA300CB92D7 /* HakkindaViewController.swift */,
+				10A75CD32A7145FA00CB92D7 /* hakkimizda2ViewController.swift */,
+			);
+			path = Hakkinda;
 			sourceTree = "<group>";
 		};
 		3731E4A2153B15DE755DD86C /* Pods */ = {
@@ -225,14 +269,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				104F05D02A6FED3800D3AF34 /* Main.swift in Sources */,
 				101F5E672A6E8D5C00CFAB66 /* NavigationViewController.swift in Sources */,
 				101F5E4E2A6E7E7700CFAB66 /* ViewController.swift in Sources */,
 				101F5E4A2A6E7E7700CFAB66 /* AppDelegate.swift in Sources */,
 				101F5E6B2A6E93DF00CFAB66 /* NewProfileViewController.swift in Sources */,
 				101F5E4C2A6E7E7700CFAB66 /* SceneDelegate.swift in Sources */,
 				101F5E692A6E8D7400CFAB66 /* ProfileViewController.swift in Sources */,
+				10A75CD02A712BA300CB92D7 /* HakkindaViewController.swift in Sources */,
+				10A75CD42A7145FA00CB92D7 /* hakkimizda2ViewController.swift in Sources */,
 				101F5E542A6E7E7700CFAB66 /* SuloCenterApp.xcdatamodeld in Sources */,
 				101F5E652A6E8D2D00CFAB66 /* MainViewController.swift in Sources */,
+				10C7BAAE2A6FC205009B375B /* MainCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +436,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -417,6 +466,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

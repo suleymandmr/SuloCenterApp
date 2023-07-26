@@ -1,16 +1,20 @@
 //
-//  MainViewController.swift
+//  hakkimizda2ViewController.swift
 //  SuloCenterApp
 //
-//  Created by eyüp yaşar demir on 24.07.2023.
+//  Created by eyüp yaşar demir on 26.07.2023.
 //
 
 import UIKit
 
-class MainViewController: UIViewController {
+class hakkimizda2ViewController: UIViewController {
 
+    @IBOutlet weak var textField: UILabel!
+    @IBOutlet weak var myButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIPasteboard.general.string = "+905437757575"
+        let content = UIPasteboard.general.string
 
         // Do any additional setup after loading the view.
     }
@@ -25,5 +29,5 @@ class MainViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+   
 }

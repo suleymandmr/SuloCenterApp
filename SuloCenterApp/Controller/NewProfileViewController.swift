@@ -7,10 +7,13 @@
 
 import UIKit
 import FirebaseAuth
-import FirebaseFirestore
+import FirebaseDatabase
+import Firebase
 
-class NewProfileViewController: UIViewController {
 
+class NewProfileViewController: UIViewController , UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+
+    
     @IBOutlet weak var isimLabel: UITextField!
     @IBOutlet weak var soyisimLabel: UITextField!
     @IBOutlet weak var epostaLabel: UITextField!
@@ -43,7 +46,31 @@ class NewProfileViewController: UIViewController {
           makeAlert(titleInput: "Error", messageInput: "Userename/Password")
         }
         
-        
+        let firestoreDatabase = Firestore.firestore()
+
+        // Realtime Database referansı
+        let realtimeDatabaseRef = Database.database().reference()
+
+        // Firestore veri yapısını hazırlayın
+        let firestorePost = [
+            "Isim": self.isimLabel.text!,
+            "Soyisim": self.soyisimLabel.text!,
+            "Eposta": self.epostaLabel.text!,
+            "Sehir": self.sehirLabel.text!,
+            "Cinsiyet": self.cinsiyetLabel.text!,
+            "Telefon": self.telefonLabel.text!,
+            "Dogum": self.dogumLabel.text!,
+            "date": ServerValue.timestamp()
+        ] as [String: Any]
+
+        // Realtime Database verisini ekleyin
+        realtimeDatabaseRef.child("Posts").childByAutoId().setValue(firestorePost) { (error, ref) in
+            if let error = error {
+                self.makeAlert(titleInput: "Error!", messageInput: error.localizedDescription)
+            } else {
+                // Başarıyla eklendiğinde yapılacak işlemler
+            }
+        }
             
         }
     func makeAlert(titleInput: String, messageInput: String){

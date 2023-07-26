@@ -43,4 +43,7 @@ class ViewController: UIViewController {
         alert.addAction(okButton)
         self.present(alert, animated: true, completion: nil )
     }
+    @IBAction func uyeOlmadanClicked(_ sender: Any) {
+        performSegue(withIdentifier: "toMainVC", sender: nil)
+    }
 }

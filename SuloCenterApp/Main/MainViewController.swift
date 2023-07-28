@@ -11,10 +11,11 @@ import SDWebImage
 
 
 
-class MainViewController: UIViewController , UITableViewDelegate, UITableViewDataSource{
+class MainViewController: UIViewController {
     
     var imageArray = [String]()
     var subjectArray = [String]()
+  
     
     let fireStoreDatabase = Firestore.firestore()
     
@@ -22,9 +23,10 @@ class MainViewController: UIViewController , UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
+        tableView.allowsSelection = true
         tableView.dataSource = self
         tableView.delegate = self
+        
        
         
         getDataFromFirebase()
@@ -63,18 +65,23 @@ class MainViewController: UIViewController , UITableViewDelegate, UITableViewDat
             }
         }
     }
-   
+    
+}
+
+extension MainViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return subjectArray.count
     }
-
+    
+   
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MainCell
         cell.detayLabel.text = subjectArray[indexPath.row]
         cell.detayImageView.sd_setImage(with: URL(string: self.imageArray[indexPath.row]) )
         return cell
     }
-    
 
    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -84,6 +91,24 @@ class MainViewController: UIViewController , UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 10
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Fotoğrafa tıklama işlevini çağırın
+        photoTapped(at: indexPath)
+    }
+}
+
+extension MainViewController {
+    func photoTapped(at indexPath: IndexPath) {
+        
+        print("Photo tapped at index: \(indexPath.row)")
+        
+        
+        if(indexPath.row == 2){
+            let next = self.storyboard?.instantiateViewController(withIdentifier: "SinemaViewController") as! SinemaViewController
+           
+               //next.photoData = photoData
+               self.present(next, animated: true, completion: nil)
+        }
+    }
     
-   
 }

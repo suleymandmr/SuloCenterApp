@@ -10,10 +10,10 @@ import MapKit
 import CoreLocation
 import CoreData
 import Firebase
-
+import SideMenu
 class HakkindaViewController: UIViewController {
     
-  
+    var menu : SideMenuNavigationController?
     @IBOutlet weak var aciklamaLabel: UITextView!
     
     var locationManager = CLLocationManager()
@@ -38,6 +38,9 @@ class HakkindaViewController: UIViewController {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        
+      
+        
         getDataFromFirebase()
         let gestureRecongnizer = UILongPressGestureRecognizer(target: self, action: #selector(chooseLocation(gestureRecognizer:)))
         gestureRecongnizer.minimumPressDuration = 3
@@ -56,9 +59,15 @@ class HakkindaViewController: UIViewController {
              button1.frame = CGRect(x: 100, y: 200, width: 200, height: 50)
              view.addSubview(button)
         getDataFromFirebase()
-        
+        menu = SideMenuNavigationController(rootViewController: MenuListController())
+        menu?.leftSide = true
+        menu?.setNavigationBarHidden(true, animated: true)
         
     }
+    @IBAction func didTopMenu(_ sender: Any) {
+        present(menu!, animated: true)
+    }
+   
     
     func getDataFromFirebase (){
         let ref = Database.database().reference().child("Hakkimizda").queryOrderedByKey().observeSingleEvent(of: .value) { snapshot in
@@ -222,3 +231,28 @@ extension HakkindaViewController: MKMapViewDelegate, CLLocationManagerDelegate {
    
 
 }
+class MenuListeController: UITableViewController{
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+    }
+    
+    
+    
+    var items = ["First", "Second","First", "Second","First", "Second","First", "Second",]
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return items.count
+        //self.performSegue(withIdentifier: "toMainVC", sender: nil)
+    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = items[indexPath.row ]
+        
+        return cell
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+

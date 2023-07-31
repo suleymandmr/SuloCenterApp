@@ -8,11 +8,11 @@
 import UIKit
 import Firebase
 import SDWebImage
-
+import SideMenu
 
 
 class MainViewController: UIViewController {
-    
+    var menu : SideMenuNavigationController?
     var imageArray = [String]()
     var subjectArray = [String]()
   
@@ -26,10 +26,26 @@ class MainViewController: UIViewController {
         tableView.allowsSelection = true
         tableView.dataSource = self
         tableView.delegate = self
-        
-       
-        
+    
         getDataFromFirebase()
+        
+        
+        
+        menu = SideMenuNavigationController(rootViewController: MenuListController())
+        menu?.leftSide = true
+        menu?.setNavigationBarHidden(true, animated: true)
+        
+        
+        
+        
+        
+        
+        
+    }
+    
+    
+    @IBAction func didTopMenu(){
+        present(menu!, animated: true)
     }
     
     func getDataFromFirebase (){
@@ -102,13 +118,53 @@ extension MainViewController {
         
         print("Photo tapped at index: \(indexPath.row)")
         
+        if(indexPath.row == 1){
+            let next = self.storyboard?.instantiateViewController(withIdentifier: "MagazalarViewController") as! MagazalarViewController
+           
+               //next.photoData = photoData
+               //self.present(next, animated: true, completion: nil)
+            self.navigationController?.pushViewController(next, animated: false)
+        }
         
         if(indexPath.row == 2){
             let next = self.storyboard?.instantiateViewController(withIdentifier: "SinemaViewController") as! SinemaViewController
            
                //next.photoData = photoData
-               self.present(next, animated: true, completion: nil)
+               //self.present(next, animated: true, completion: nil)
+            self.navigationController?.pushViewController(next, animated: false)
+        }
+        if(indexPath.row == 3){
+            let next = self.storyboard?.instantiateViewController(withIdentifier: "EtkinlikViewController") as! EtkinlikViewController
+           
+               //next.photoData = photoData
+               //self.present(next, animated: true, completion: nil)
+            self.navigationController?.pushViewController(next, animated: false)
         }
     }
     
+}
+
+class MenuListController: UITableViewController{
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+    }
+    
+    
+    
+    var items = ["First", "Second","First", "Second","First", "Second","First", "Second",]
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return items.count
+        //self.performSegue(withIdentifier: "toMainVC", sender: nil)
+    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = items[indexPath.row ]
+        
+        return cell
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }

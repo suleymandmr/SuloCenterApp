@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1018DD862A72975500CC3844 /* SinemaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1018DD852A72975500CC3844 /* SinemaViewController.swift */; };
+		100DCC882A77BB8600CD8D8D /* EtkinlikViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100DCC872A77BB8600CD8D8D /* EtkinlikViewController.swift */; };
+		100DCC8B2A77BD8900CD8D8D /* MagazalarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100DCC8A2A77BD8900CD8D8D /* MagazalarViewController.swift */; };
+		100DCC8F2A77BFFC00CD8D8D /* Sinema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100DCC8E2A77BFFC00CD8D8D /* Sinema.swift */; };
 		101F5E4A2A6E7E7700CFAB66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101F5E492A6E7E7700CFAB66 /* AppDelegate.swift */; };
 		101F5E4C2A6E7E7700CFAB66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101F5E4B2A6E7E7700CFAB66 /* SceneDelegate.swift */; };
 		101F5E4E2A6E7E7700CFAB66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101F5E4D2A6E7E7700CFAB66 /* ViewController.swift */; };
@@ -21,13 +23,17 @@
 		101F5E692A6E8D7400CFAB66 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101F5E682A6E8D7300CFAB66 /* ProfileViewController.swift */; };
 		101F5E6B2A6E93DF00CFAB66 /* NewProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101F5E6A2A6E93DF00CFAB66 /* NewProfileViewController.swift */; };
 		104F05D02A6FED3800D3AF34 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104F05CF2A6FED3800D3AF34 /* Main.swift */; };
+		1065B4DE2A77CE9000E1C765 /* SinemaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1065B4DD2A77CE9000E1C765 /* SinemaCell.swift */; };
+		109D82CF2A77C7DC002D264C /* SinemaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109D82CE2A77C7DC002D264C /* SinemaViewController.swift */; };
 		10A75CD02A712BA300CB92D7 /* HakkindaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A75CCF2A712BA300CB92D7 /* HakkindaViewController.swift */; };
 		10C7BAAE2A6FC205009B375B /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C7BAAD2A6FC205009B375B /* MainCell.swift */; };
 		A313961C6D1F1426FDEAB52A /* Pods_SuloCenterApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E609927D15430F26BEE5589 /* Pods_SuloCenterApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1018DD852A72975500CC3844 /* SinemaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinemaViewController.swift; sourceTree = "<group>"; };
+		100DCC872A77BB8600CD8D8D /* EtkinlikViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtkinlikViewController.swift; sourceTree = "<group>"; };
+		100DCC8A2A77BD8900CD8D8D /* MagazalarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazalarViewController.swift; sourceTree = "<group>"; };
+		100DCC8E2A77BFFC00CD8D8D /* Sinema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sinema.swift; sourceTree = "<group>"; };
 		101F5E462A6E7E7700CFAB66 /* SuloCenterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuloCenterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		101F5E492A6E7E7700CFAB66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		101F5E4B2A6E7E7700CFAB66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +49,8 @@
 		101F5E682A6E8D7300CFAB66 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		101F5E6A2A6E93DF00CFAB66 /* NewProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfileViewController.swift; sourceTree = "<group>"; };
 		104F05CF2A6FED3800D3AF34 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		1065B4DD2A77CE9000E1C765 /* SinemaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinemaCell.swift; sourceTree = "<group>"; };
+		109D82CE2A77C7DC002D264C /* SinemaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinemaViewController.swift; sourceTree = "<group>"; };
 		10A75CCF2A712BA300CB92D7 /* HakkindaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HakkindaViewController.swift; sourceTree = "<group>"; };
 		10C7BAAD2A6FC205009B375B /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		6E609927D15430F26BEE5589 /* Pods_SuloCenterApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuloCenterApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +70,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		100DCC862A77BB5D00CD8D8D /* Etkinlik */ = {
+			isa = PBXGroup;
+			children = (
+				100DCC872A77BB8600CD8D8D /* EtkinlikViewController.swift */,
+			);
+			path = Etkinlik;
+			sourceTree = "<group>";
+		};
+		100DCC892A77BD7A00CD8D8D /* Magazalar */ = {
+			isa = PBXGroup;
+			children = (
+				100DCC8A2A77BD8900CD8D8D /* MagazalarViewController.swift */,
+			);
+			path = Magazalar;
+			sourceTree = "<group>";
+		};
 		101F5E3D2A6E7E7700CFAB66 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +107,8 @@
 		101F5E482A6E7E7700CFAB66 /* SuloCenterApp */ = {
 			isa = PBXGroup;
 			children = (
+				100DCC892A77BD7A00CD8D8D /* Magazalar */,
+				100DCC862A77BB5D00CD8D8D /* Etkinlik */,
 				10E884972A7287D9000C0F55 /* Sinema */,
 				10A75CCC2A712B5A00CB92D7 /* Hakkinda */,
 				10A75CCB2A71127600CB92D7 /* Navigation */,
@@ -139,7 +165,9 @@
 		10E884972A7287D9000C0F55 /* Sinema */ = {
 			isa = PBXGroup;
 			children = (
-				1018DD852A72975500CC3844 /* SinemaViewController.swift */,
+				100DCC8E2A77BFFC00CD8D8D /* Sinema.swift */,
+				109D82CE2A77C7DC002D264C /* SinemaViewController.swift */,
+				1065B4DD2A77CE9000E1C765 /* SinemaCell.swift */,
 			);
 			path = Sinema;
 			sourceTree = "<group>";
@@ -278,12 +306,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				104F05D02A6FED3800D3AF34 /* Main.swift in Sources */,
-				1018DD862A72975500CC3844 /* SinemaViewController.swift in Sources */,
+				109D82CF2A77C7DC002D264C /* SinemaViewController.swift in Sources */,
 				101F5E672A6E8D5C00CFAB66 /* NavigationViewController.swift in Sources */,
 				101F5E4E2A6E7E7700CFAB66 /* ViewController.swift in Sources */,
+				100DCC8F2A77BFFC00CD8D8D /* Sinema.swift in Sources */,
 				101F5E4A2A6E7E7700CFAB66 /* AppDelegate.swift in Sources */,
 				101F5E6B2A6E93DF00CFAB66 /* NewProfileViewController.swift in Sources */,
 				101F5E4C2A6E7E7700CFAB66 /* SceneDelegate.swift in Sources */,
+				1065B4DE2A77CE9000E1C765 /* SinemaCell.swift in Sources */,
+				100DCC8B2A77BD8900CD8D8D /* MagazalarViewController.swift in Sources */,
+				100DCC882A77BB8600CD8D8D /* EtkinlikViewController.swift in Sources */,
 				101F5E692A6E8D7400CFAB66 /* ProfileViewController.swift in Sources */,
 				10A75CD02A712BA300CB92D7 /* HakkindaViewController.swift in Sources */,
 				101F5E542A6E7E7700CFAB66 /* SuloCenterApp.xcdatamodeld in Sources */,

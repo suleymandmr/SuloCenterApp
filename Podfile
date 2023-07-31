@@ -10,9 +10,9 @@ pod 'Firebase/Auth'
 pod 'Firebase/Core'
 pod 'Firebase/Firestore'
 pod 'Firebase/Storage'
-pod 'FirebaseDatabase'
+pod 'Firebase/Database'
 pod 'SDWebImage', '~> 5.0'
-
+pod 'SideMenu'
   # Pods for SuloCenterApp
 
 end

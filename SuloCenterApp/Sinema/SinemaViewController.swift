@@ -4,70 +4,87 @@ import SDWebImage
 import SideMenu
 import FirebaseStorage
 
-class SinemaViewController: UIViewController , UICollectionViewDelegate, UICollectionViewDataSource {
+class SinemaViewController: UIViewController {
+    
     
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var tableView: UITableView!
-    var sinemaListesi = [Sinema]()
-    private let storage = Storage.storage().reference()
     
+    var filmler:[String] = [String]()
+    var sinemaListesi = [Sinema]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tasarim:UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        let genislik = self.collectionView.frame.size.width
+        
+        tasarim.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        tasarim.minimumInteritemSpacing = 10
+        tasarim.minimumLineSpacing = 10
+        
+        let hucreGenislik = (genislik-30)/2
+        tasarim.itemSize = CGSize(width: hucreGenislik, height: hucreGenislik*1.6)
+        
+        collectionView!.collectionViewLayout = tasarim
+        
+        fetchRealtimeDatabaseData()
+        
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        fetchFirestoreData()
+    }
+    
+    func fetchRealtimeDatabaseData() {
         
-    }
-    
-    func fetchFirestoreData() {
-        let db = Firestore.firestore()
-        db.collection("photos").getDocuments { (querySnapshot, error) in
-            if let error = error {
-                print("Firestore'dan veri çekerken hata oluştu: \(error)")
-                return
-            }
-            
-            guard let documents = querySnapshot?.documents else {
-                print("Firestore'dan herhangi bir belge bulunamadı.")
-                return
-            }
-            
-            // Firestore verilerini sinemaListesi'ne ekleyelim
-            for document in documents {
-                let id = document.documentID
-                let data = document.data()
-                if let baslik = data["Image"] as? String,
-                   let resimAdi = data["Subject"] as? String {
-                    let film = Sinema(id: id, baslik: baslik, resimAdi: resimAdi)
-                    self.sinemaListesi.append(film)
-                    print(baslik)
+            let db = Database.database().reference().child("Sinema")
+            db.observeSingleEvent(of: .value) { (snapshot) in
+                guard let filmsSnapshot = snapshot.children.allObjects as? [DataSnapshot] else {
+                    print("Realtime Database'den veri çekerken hata oluştu.")
+                    return
                 }
+                
+                // Realtime Database verilerini sinemaListesi'ne ekleyelim
+                for filmSnapshot in filmsSnapshot {
+                    let id = filmSnapshot.key
+                    let filmData = filmSnapshot.value as! [String: Any]
+                    if let baslik = filmData["Subject"] as? String,
+                       let resimAdi = filmData["Image"] as? String {
+                        let film = Sinema(id: id, baslik: baslik, resimAdi: resimAdi)
+                        self.sinemaListesi.append(film)
+                    }
+                }
+                
+                // Realtime Database verilerini aldıktan sonra gridview'i yenile
+                self.collectionView.reloadData()
             }
-            
-            // Firestore verilerini aldıktan sonra gridview'i yenile
-            self.collectionView.reloadData()
+        
         }
+        
+}
+
+extension SinemaViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return sinemaListesi.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SinemaCell", for: indexPath) as! SinemaCell
+                let film = sinemaListesi[indexPath.row]
+                cell.sinemaLabel.text = film.baslik
+        cell.sinemaImageView.sd_setImage(with: URL(string: film.resimAdi))
+                return cell
     }
     
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
     
-    // Gridview'de kaç satır olacağını belirliyoruz
-     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-         return sinemaListesi.count
-     }
-     
-     // Her bir hücreyi dolduruyoruz
-     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SinemaCell
-         let film = sinemaListesi[indexPath.row]
-         cell.TitleLabel.text = film.baslik
-         cell.imageView.image = UIImage(named: film.resimAdi)
-         return cell
-     }
- }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "", sender: nil)
+    }
+  
     
     
     
-    
-
+}

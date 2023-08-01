@@ -485,67 +485,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lzD-KN-wjm">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CT4-SD-erq">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="5Q9-T6-4Bt">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="300"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pPv-SP-Uk8">
-                                        <size key="itemSize" width="334" height="262"/>
-                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                    </collectionViewFlowLayout>
-                                    <cells>
-                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="cell" reuseIdentifier="cell" id="TJP-eR-GHj" customClass="SinemaCell" customModule="SuloCenterApp" customModuleProvider="target">
-                                            <rect key="frame" x="29.666666666666668" y="0.0" width="334" height="262"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ZVb-qh-S0B">
-                                                <rect key="frame" x="0.0" y="0.0" width="334" height="262"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2c3-ah-CHW">
-                                                        <rect key="frame" x="84" y="8" width="166" height="196"/>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YYI-5A-1c9">
-                                                        <rect key="frame" x="146" y="223" width="42" height="21"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="2c3-ah-CHW" secondAttribute="bottom" constant="58" id="GSh-c7-v4F"/>
-                                                    <constraint firstItem="2c3-ah-CHW" firstAttribute="top" secondItem="ZVb-qh-S0B" secondAttribute="top" constant="8" id="Jfj-Q6-nv7"/>
-                                                    <constraint firstAttribute="trailing" secondItem="2c3-ah-CHW" secondAttribute="trailing" constant="84" id="jZu-HW-hIw"/>
-                                                    <constraint firstItem="2c3-ah-CHW" firstAttribute="leading" secondItem="ZVb-qh-S0B" secondAttribute="leading" constant="84" id="wsh-77-Y6y"/>
-                                                </constraints>
-                                            </collectionViewCellContentView>
-                                            <size key="customSize" width="334" height="262"/>
-                                            <connections>
-                                                <outlet property="imageView" destination="2c3-ah-CHW" id="c2p-yU-yoK"/>
-                                                <outlet property="titleLabel" destination="YYI-5A-1c9" id="DXL-Y6-moo"/>
-                                            </connections>
-                                        </collectionViewCell>
-                                    </cells>
-                                </collectionView>
-                            </tableView>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tzk-CF-Cfn">
+                                    <size key="itemSize" width="186" height="275"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="SinemaCell" reuseIdentifier="SinemaCell" id="CO3-7T-Zdu" customClass="SinemaCell" customModule="SuloCenterApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="186" height="275"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ao5-2v-igR">
+                                            <rect key="frame" x="0.0" y="0.0" width="186" height="275"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Qd-Tg-oqg">
+                                                    <rect key="frame" x="18" y="8" width="150" height="200"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTo-qn-J8c">
+                                                    <rect key="frame" x="18" y="216" width="150" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="186" height="275"/>
+                                        <connections>
+                                            <outlet property="sinemaImageView" destination="3Qd-Tg-oqg" id="6NT-Cw-YmB"/>
+                                            <outlet property="sinemaLabel" destination="mTo-qn-J8c" id="f9l-1N-ngd"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Qjd-Z3-Z1N"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="collectionView" destination="5Q9-T6-4Bt" id="HHM-NC-VGJ"/>
-                        <outlet property="tableView" destination="lzD-KN-wjm" id="kjs-p5-jFO"/>
+                        <outlet property="collectionView" destination="CT4-SD-erq" id="oiA-FW-6b1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jrm-LI-yTz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3704.5801526717555" y="-1335.2112676056338"/>
+            <point key="canvasLocation" x="3771.7557251908397" y="-461.26760563380282"/>
         </scene>
         <!--Hakkımızda-->
         <scene sceneID="OMf-ii-Q0a">

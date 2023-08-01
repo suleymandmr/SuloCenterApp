@@ -9,7 +9,7 @@ import UIKit
 
 class SinemaCell: UICollectionViewCell {
     
-    @IBOutlet weak var TitleLabel: UILabel!
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var sinemaImageView: UIImageView!
+    @IBOutlet weak var sinemaLabel: UILabel!
     
 }

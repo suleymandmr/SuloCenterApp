@@ -6,7 +6,7 @@
 //
 
 import Foundation
-class Sinema{
+class Sinema {
     var id: String
     var baslik: String
     var resimAdi: String

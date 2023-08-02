@@ -23,7 +23,7 @@ class ProfileViewController: UIViewController {
     var about = ["Cinsiyet","Dogum","Eposta","Isim","Sehir","Soyisim","Telefon" ]
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        initializeHideKeyboard()
         Auth.auth().addStateDidChangeListener { (auth, user) in
             if let user = user {
                 // Kullanıcı oturum açmışsa, kullanıcının kimliğini alıyoruz
@@ -118,4 +118,22 @@ class ProfileViewController: UIViewController {
     
 
     
+}
+extension ProfileViewController {
+
+    func initializeHideKeyboard(){
+        //Declare a Tap Gesture Recognizer which will trigger our dismissMyKeyboard() function
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(dismissMyKeyboard))
+
+        //Add this tap gesture recognizer to the parent view
+        view.addGestureRecognizer(tap)
+    }
+
+    @objc func dismissMyKeyboard(){
+        //endEditing causes the view (or one of its embedded text fields) to resign the first responder status.
+        //In short- Dismiss the active keyboard.
+        view.endEditing(true)
+    }
 }

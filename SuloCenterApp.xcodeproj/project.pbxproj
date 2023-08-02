@@ -26,6 +26,11 @@
 		1065B4DE2A77CE9000E1C765 /* SinemaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1065B4DD2A77CE9000E1C765 /* SinemaCell.swift */; };
 		109D82CF2A77C7DC002D264C /* SinemaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109D82CE2A77C7DC002D264C /* SinemaViewController.swift */; };
 		10A75CD02A712BA300CB92D7 /* HakkindaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A75CCF2A712BA300CB92D7 /* HakkindaViewController.swift */; };
+		10B929252A7A377B003EFE42 /* Magaza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B929242A7A377B003EFE42 /* Magaza.swift */; };
+		10B929272A7A37A6003EFE42 /* MagazaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B929262A7A37A6003EFE42 /* MagazaCell.swift */; };
+		10C0E58F2A79121700AFC4C0 /* EtkinlikCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C0E58E2A79121700AFC4C0 /* EtkinlikCell.swift */; };
+		10C0E5912A79122600AFC4C0 /* Etkinlik.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C0E5902A79122600AFC4C0 /* Etkinlik.swift */; };
+		10C0E5932A791C4100AFC4C0 /* DetayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C0E5922A791C4100AFC4C0 /* DetayVC.swift */; };
 		10C7BAAE2A6FC205009B375B /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C7BAAD2A6FC205009B375B /* MainCell.swift */; };
 		A313961C6D1F1426FDEAB52A /* Pods_SuloCenterApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E609927D15430F26BEE5589 /* Pods_SuloCenterApp.framework */; };
 /* End PBXBuildFile section */
@@ -52,6 +57,11 @@
 		1065B4DD2A77CE9000E1C765 /* SinemaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinemaCell.swift; sourceTree = "<group>"; };
 		109D82CE2A77C7DC002D264C /* SinemaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinemaViewController.swift; sourceTree = "<group>"; };
 		10A75CCF2A712BA300CB92D7 /* HakkindaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HakkindaViewController.swift; sourceTree = "<group>"; };
+		10B929242A7A377B003EFE42 /* Magaza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magaza.swift; sourceTree = "<group>"; };
+		10B929262A7A37A6003EFE42 /* MagazaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazaCell.swift; sourceTree = "<group>"; };
+		10C0E58E2A79121700AFC4C0 /* EtkinlikCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtkinlikCell.swift; sourceTree = "<group>"; };
+		10C0E5902A79122600AFC4C0 /* Etkinlik.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Etkinlik.swift; sourceTree = "<group>"; };
+		10C0E5922A791C4100AFC4C0 /* DetayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetayVC.swift; sourceTree = "<group>"; };
 		10C7BAAD2A6FC205009B375B /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		6E609927D15430F26BEE5589 /* Pods_SuloCenterApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuloCenterApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7040B9ABA5EC4A567E761F87 /* Pods-SuloCenterApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuloCenterApp.debug.xcconfig"; path = "Target Support Files/Pods-SuloCenterApp/Pods-SuloCenterApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +84,9 @@
 			isa = PBXGroup;
 			children = (
 				100DCC872A77BB8600CD8D8D /* EtkinlikViewController.swift */,
+				10C0E58E2A79121700AFC4C0 /* EtkinlikCell.swift */,
+				10C0E5902A79122600AFC4C0 /* Etkinlik.swift */,
+				10C0E5922A791C4100AFC4C0 /* DetayVC.swift */,
 			);
 			path = Etkinlik;
 			sourceTree = "<group>";
@@ -82,6 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				100DCC8A2A77BD8900CD8D8D /* MagazalarViewController.swift */,
+				10B929242A7A377B003EFE42 /* Magaza.swift */,
+				10B929262A7A37A6003EFE42 /* MagazaCell.swift */,
 			);
 			path = Magazalar;
 			sourceTree = "<group>";
@@ -305,6 +320,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10B929252A7A377B003EFE42 /* Magaza.swift in Sources */,
+				10C0E5912A79122600AFC4C0 /* Etkinlik.swift in Sources */,
+				10C0E5932A791C4100AFC4C0 /* DetayVC.swift in Sources */,
 				104F05D02A6FED3800D3AF34 /* Main.swift in Sources */,
 				109D82CF2A77C7DC002D264C /* SinemaViewController.swift in Sources */,
 				101F5E672A6E8D5C00CFAB66 /* NavigationViewController.swift in Sources */,
@@ -312,10 +330,12 @@
 				100DCC8F2A77BFFC00CD8D8D /* Sinema.swift in Sources */,
 				101F5E4A2A6E7E7700CFAB66 /* AppDelegate.swift in Sources */,
 				101F5E6B2A6E93DF00CFAB66 /* NewProfileViewController.swift in Sources */,
+				10B929272A7A37A6003EFE42 /* MagazaCell.swift in Sources */,
 				101F5E4C2A6E7E7700CFAB66 /* SceneDelegate.swift in Sources */,
 				1065B4DE2A77CE9000E1C765 /* SinemaCell.swift in Sources */,
 				100DCC8B2A77BD8900CD8D8D /* MagazalarViewController.swift in Sources */,
 				100DCC882A77BB8600CD8D8D /* EtkinlikViewController.swift in Sources */,
+				10C0E58F2A79121700AFC4C0 /* EtkinlikCell.swift in Sources */,
 				101F5E692A6E8D7400CFAB66 /* ProfileViewController.swift in Sources */,
 				10A75CD02A712BA300CB92D7 /* HakkindaViewController.swift in Sources */,
 				101F5E542A6E7E7700CFAB66 /* SuloCenterApp.xcdatamodeld in Sources */,
@@ -476,7 +496,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -506,7 +526,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

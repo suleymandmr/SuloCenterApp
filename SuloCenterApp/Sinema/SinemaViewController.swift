@@ -81,7 +81,7 @@ extension SinemaViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "", sender: nil)
+        //performSegue(withIdentifier: "", sender: nil)
     }
   
     

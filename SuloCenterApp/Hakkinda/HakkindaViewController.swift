@@ -11,6 +11,7 @@ import CoreLocation
 import CoreData
 import Firebase
 import SideMenu
+
 class HakkindaViewController: UIViewController {
     
     var menu : SideMenuNavigationController?
@@ -59,7 +60,7 @@ class HakkindaViewController: UIViewController {
              button1.frame = CGRect(x: 100, y: 200, width: 200, height: 50)
              view.addSubview(button)
         getDataFromFirebase()
-        menu = SideMenuNavigationController(rootViewController: MenuListController())
+        menu = SideMenuNavigationController(rootViewController: MenuListeController())
         menu?.leftSide = true
         menu?.setNavigationBarHidden(true, animated: true)
         

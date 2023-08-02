@@ -12,10 +12,11 @@ import SideMenu
 
 
 class MainViewController: UIViewController {
-    var menu : SideMenuNavigationController?
+    
     var imageArray = [String]()
     var subjectArray = [String]()
-  
+    let menuItems = ["First", "Second"]
+
     
     let fireStoreDatabase = Firestore.firestore()
     
@@ -29,12 +30,14 @@ class MainViewController: UIViewController {
     
         getDataFromFirebase()
         
+        let sideMenuViewController = SideMenuViewController()
+        let menu = SideMenuNavigationController(rootViewController: sideMenuViewController)
+              SideMenuManager.default.leftMenuNavigationController = menu
+              
+              // Yan menüyü açmak için bir buton ekleyin
+              navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: .plain, target: self, action: #selector(didTopMenu))
         
-        
-        menu = SideMenuNavigationController(rootViewController: MenuListController())
-        menu?.leftSide = true
-        menu?.setNavigationBarHidden(true, animated: true)
-        
+      
         
         
         
@@ -45,7 +48,7 @@ class MainViewController: UIViewController {
     
     
     @IBAction func didTopMenu(){
-        present(menu!, animated: true)
+        present(SideMenuManager.default.leftMenuNavigationController!, animated: true, completion: nil)
     }
     
     func getDataFromFirebase (){
@@ -144,27 +147,21 @@ extension MainViewController {
     
 }
 
-class MenuListController: UITableViewController{
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-    }
-    
-    
-    
-    var items = ["First", "Second","First", "Second","First", "Second","First", "Second",]
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
-        //self.performSegue(withIdentifier: "toMainVC", sender: nil)
-    }
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = items[indexPath.row ]
+extension MainViewController: SideMenuDelegate {
+    func didSelectMenuItem(title: String) {
+        // Yan menüden seçilen öğelere göre ilgili sayfaya yönlendirme işlemini burada yapabilirsiniz.
+        switch title {
+        case "First":
+            let firstViewController = NavigationViewController()
+            navigationController?.pushViewController(firstViewController, animated: true)
+        case "Second":
+            let secondViewController = HakkindaViewController()
+            navigationController?.pushViewController(secondViewController, animated: true)
+        default:
+            break
+        }
         
-        return cell
-    }
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        // Sayfaya geçiş yaptıktan sonra yan menüyü kapatın
+        SideMenuManager.default.leftMenuNavigationController?.dismiss(animated: true, completion: nil)
     }
 }

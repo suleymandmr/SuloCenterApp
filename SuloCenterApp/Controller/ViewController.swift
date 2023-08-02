@@ -37,6 +37,38 @@ class ViewController: UIViewController {
         }
         
     }
+    @IBAction func sifreUnuttumClicked(_ sender: Any) {
+        
+        
+        
+        let alertController = UIAlertController(title: "E-Posta Adresi", message: "Lütfen e-posta adresinizi girin:", preferredStyle: .alert)
+
+          // E-posta girme alanı ekle
+          alertController.addTextField { (textField) in
+              textField.placeholder = "E-posta adresi"
+          }
+
+          // Vazgeç aksiyonunu ekle
+          let cancelAction = UIAlertAction(title: "Vazgeç", style: .cancel) { (_) in
+              // Vazgeç butonuna tıklandığında yapılacak işlemler (opsiyonel)
+          }
+          alertController.addAction(cancelAction)
+
+          // Tamam aksiyonunu ekle
+          let okAction = UIAlertAction(title: "Tamam", style: .default) { (_) in
+              if let email = alertController.textFields?.first?.text {
+                  // Burada e-posta adresiyle yapılacak işlemleri gerçekleştirin.
+                  print("Girilen e-posta adresi: \(email)")
+              }
+          }
+          alertController.addAction(okAction)
+
+          // UIAlertController'ı görüntüle
+          self.present(alertController, animated: true, completion: nil)
+        
+        
+        
+    }
     
     @IBAction func uyeOlClicked(_ sender: Any) {
     }

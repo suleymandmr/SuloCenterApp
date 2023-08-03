@@ -135,13 +135,13 @@
 				10A75CC92A71123700CB92D7 /* Controller */,
 				101F5E492A6E7E7700CFAB66 /* AppDelegate.swift */,
 				101F5E4B2A6E7E7700CFAB66 /* SceneDelegate.swift */,
+				10C72E6C2A7A7ED40081F5F5 /* SideMenuViewController.swift */,
 				101F5E4F2A6E7E7700CFAB66 /* Main.storyboard */,
 				101F5E552A6E7E7900CFAB66 /* Assets.xcassets */,
 				101F5E572A6E7E7900CFAB66 /* LaunchScreen.storyboard */,
 				101F5E622A6E8C2200CFAB66 /* GoogleService-Info.plist */,
 				101F5E5A2A6E7E7900CFAB66 /* Info.plist */,
 				101F5E522A6E7E7700CFAB66 /* SuloCenterApp.xcdatamodeld */,
-				10C72E6C2A7A7ED40081F5F5 /* SideMenuViewController.swift */,
 			);
 			path = SuloCenterApp;
 			sourceTree = "<group>";

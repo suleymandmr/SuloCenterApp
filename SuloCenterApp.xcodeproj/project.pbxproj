@@ -28,6 +28,7 @@
 		10A75CD02A712BA300CB92D7 /* HakkindaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A75CCF2A712BA300CB92D7 /* HakkindaViewController.swift */; };
 		10B929252A7A377B003EFE42 /* Magaza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B929242A7A377B003EFE42 /* Magaza.swift */; };
 		10B929272A7A37A6003EFE42 /* MagazaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B929262A7A37A6003EFE42 /* MagazaCell.swift */; };
+		10C0E4E62A7B7EA900AF302C /* ParibuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C0E4E52A7B7EA900AF302C /* ParibuVC.swift */; };
 		10C0E58F2A79121700AFC4C0 /* EtkinlikCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C0E58E2A79121700AFC4C0 /* EtkinlikCell.swift */; };
 		10C0E5912A79122600AFC4C0 /* Etkinlik.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C0E5902A79122600AFC4C0 /* Etkinlik.swift */; };
 		10C0E5932A791C4100AFC4C0 /* DetayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C0E5922A791C4100AFC4C0 /* DetayVC.swift */; };
@@ -60,6 +61,7 @@
 		10A75CCF2A712BA300CB92D7 /* HakkindaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HakkindaViewController.swift; sourceTree = "<group>"; };
 		10B929242A7A377B003EFE42 /* Magaza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magaza.swift; sourceTree = "<group>"; };
 		10B929262A7A37A6003EFE42 /* MagazaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazaCell.swift; sourceTree = "<group>"; };
+		10C0E4E52A7B7EA900AF302C /* ParibuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParibuVC.swift; sourceTree = "<group>"; };
 		10C0E58E2A79121700AFC4C0 /* EtkinlikCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtkinlikCell.swift; sourceTree = "<group>"; };
 		10C0E5902A79122600AFC4C0 /* Etkinlik.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Etkinlik.swift; sourceTree = "<group>"; };
 		10C0E5922A791C4100AFC4C0 /* DetayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetayVC.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				100DCC8E2A77BFFC00CD8D8D /* Sinema.swift */,
 				109D82CE2A77C7DC002D264C /* SinemaViewController.swift */,
 				1065B4DD2A77CE9000E1C765 /* SinemaCell.swift */,
+				10C0E4E52A7B7EA900AF302C /* ParibuVC.swift */,
 			);
 			path = Sinema;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				10A75CD02A712BA300CB92D7 /* HakkindaViewController.swift in Sources */,
 				101F5E542A6E7E7700CFAB66 /* SuloCenterApp.xcdatamodeld in Sources */,
 				101F5E652A6E8D2D00CFAB66 /* MainViewController.swift in Sources */,
+				10C0E4E62A7B7EA900AF302C /* ParibuVC.swift in Sources */,
 				10C7BAAE2A6FC205009B375B /* MainCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,7 +504,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -530,7 +534,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

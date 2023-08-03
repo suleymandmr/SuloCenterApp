@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class MainCell: UITableViewCell {
     
     @IBOutlet weak var detayImageView: UIImageView!

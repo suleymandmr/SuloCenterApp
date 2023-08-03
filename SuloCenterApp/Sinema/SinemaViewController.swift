@@ -4,15 +4,17 @@ import SDWebImage
 import SideMenu
 import FirebaseStorage
 
+
 class SinemaViewController: UIViewController {
     
-    
+   
     @IBOutlet weak var collectionView: UICollectionView!
     
     var filmler:[String] = [String]()
     var sinemaListesi = [Sinema]()
     override func viewDidLoad() {
         super.viewDidLoad()
+      
         
         let tasarim:UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         let genislik = self.collectionView.frame.size.width
@@ -30,8 +32,10 @@ class SinemaViewController: UIViewController {
         
         collectionView.delegate = self
         collectionView.dataSource = self
-        
+        collectionView.allowsSelection = true
     }
+   
+ 
     
     func fetchRealtimeDatabaseData() {
         
@@ -82,9 +86,21 @@ extension SinemaViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //performSegue(withIdentifier: "", sender: nil)
+        photoTapped(at: indexPath)
     }
-  
+ 
     
     
+}
+extension SinemaViewController {
+    func photoTapped(at indexPath: IndexPath) {
+        
+        print("Photo tapped at index: \(indexPath.row)")
+                
+                let next = self.storyboard?.instantiateViewController(withIdentifier: "ParibuVC") as! ParibuVC
+                //next.photoData = photoData
+                //self.present(next, animated: true, completion: nil)
+                self.navigationController?.pushViewController(next, animated: false)
+            }
     
 }

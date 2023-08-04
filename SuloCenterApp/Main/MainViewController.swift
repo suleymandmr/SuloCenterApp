@@ -12,10 +12,10 @@ import SideMenu
 
 
 class MainViewController: UIViewController {
-    
+    var menu: SideMenuNavigationController?
     var imageArray = [String]()
     var subjectArray = [String]()
-    let menuItems = ["First", "Second"]
+    
 
     
     let fireStoreDatabase = Firestore.firestore()
@@ -29,26 +29,21 @@ class MainViewController: UIViewController {
         tableView.delegate = self
     
         getDataFromFirebase()
+    
         
-        let sideMenuViewController = SideMenuViewController()
-        let menu = SideMenuNavigationController(rootViewController: sideMenuViewController)
-              SideMenuManager.default.leftMenuNavigationController = menu
-              
-              // Yan menüyü açmak için bir buton ekleyin
-              navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Menu", style: .plain, target: self, action: #selector(didTopMenu))
+        menu = SideMenuNavigationController(rootViewController: MenuListeController())
+        menu?.leftSide = true
+        //menu?.setNavigationBarHidden(true, animated: true)
         
-      
-        
-        
-        
-        
+        SideMenuManager.default.leftMenuNavigationController = menu
+        //SideMenuManager.default.addPanGestureToPresent(toView: self.view)
         
         
     }
     
     
     @IBAction func didTopMenu(){
-        present(SideMenuManager.default.leftMenuNavigationController!, animated: true, completion: nil)
+      present(menu!,animated: true)
     }
     
     func getDataFromFirebase (){
@@ -126,7 +121,7 @@ extension MainViewController {
            
                //next.photoData = photoData
                //self.present(next, animated: true, completion: nil)
-            self.navigationController?.pushViewController(next, animated: false)
+            self.navigationController?.pushViewController(next, animated: true)
         }
         
         if(indexPath.row == 2){
@@ -134,34 +129,103 @@ extension MainViewController {
            
                //next.photoData = photoData
                //self.present(next, animated: true, completion: nil)
-            self.navigationController?.pushViewController(next, animated: false)
+            self.navigationController?.pushViewController(next, animated: true)
         }
         if(indexPath.row == 3){
             let next = self.storyboard?.instantiateViewController(withIdentifier: "EtkinlikViewController") as! EtkinlikViewController
            
                //next.photoData = photoData
                //self.present(next, animated: true, completion: nil)
-            self.navigationController?.pushViewController(next, animated: false)
+            self.navigationController?.pushViewController(next, animated: true)
         }
     }
     
 }
 
-extension MainViewController: SideMenuDelegate {
-    func didSelectMenuItem(title: String) {
-        // Yan menüden seçilen öğelere göre ilgili sayfaya yönlendirme işlemini burada yapabilirsiniz.
-        switch title {
-        case "First":
-            let firstViewController = NavigationViewController()
-            navigationController?.pushViewController(firstViewController, animated: true)
-        case "Second":
-            let secondViewController = HakkindaViewController()
-            navigationController?.pushViewController(secondViewController, animated: true)
+class MenuListeController: UITableViewController{
+    
+    var items = ["Mağazalar", "Etkinlikler", "Sinema","Navigasyon", "Hakkımızda","Hesabım"]
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.backgroundColor = .darkGray
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return items.count
+    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = items[indexPath.row]
+        cell.textLabel?.textColor = .white
+        cell.backgroundColor  = .darkGray
+        return cell
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+
+        
+        switch indexPath.row{
+        case 0:
+           // let sinemaViewController = TestViewController()
+            //navigationController!.pushViewController(sinemaViewController, animated: true)
+            
+            /*let navigationViewController = storyBoard.instantiateViewController(withIdentifier: "SinemaViewController") as! SinemaViewController
+        
+            navigationController?.pushViewController(navigationViewController, animated: true)*/
+            
+            
+            let navigationViewController = storyBoard.instantiateViewController(withIdentifier: "MagazalarViewController") as! MagazalarViewController
+        
+            navigationController?.pushViewController(navigationViewController, animated: true)
+            break
+        case 1:
+            /*let navigationViewController = storyBoard.instantiateViewController(withIdentifier: "HakkindaViewController") as! HakkindaViewController
+            navigationViewController.modalPresentationStyle = .fullScreen
+            
+            present(navigationViewController, animated: false )*/
+            let navigationViewController = storyBoard.instantiateViewController(withIdentifier: "EtkinlikViewController") as! EtkinlikViewController
+        
+            navigationController?.pushViewController(navigationViewController, animated: true)
+            break
+        case 2:
+            let navigationViewController = storyBoard.instantiateViewController(withIdentifier: "SinemaViewController") as! SinemaViewController
+        
+            navigationController?.pushViewController(navigationViewController, animated: true)
+            
+        
+            break
+        case 3:
+            let navigationViewController = storyBoard.instantiateViewController(withIdentifier: "NavigationViewController") as! NavigationViewController
+        
+            navigationController?.pushViewController(navigationViewController, animated: true)
+            
+        
+            break
+        case 4:
+            let navigationViewController = storyBoard.instantiateViewController(withIdentifier: "HakkindaViewController") as! HakkindaViewController
+        
+            navigationController?.pushViewController(navigationViewController, animated: true)
+            
+        
+            break
+        case 5:
+            let navigationViewController = storyBoard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+        
+            navigationController?.pushViewController(navigationViewController, animated: true)
+            
+        
+            break
         default:
             break
         }
-        
-        // Sayfaya geçiş yaptıktan sonra yan menüyü kapatın
-        SideMenuManager.default.leftMenuNavigationController?.dismiss(animated: true, completion: nil)
     }
 }
+
+
+
+  

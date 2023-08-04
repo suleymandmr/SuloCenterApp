@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 import SDWebImage
 
-class MagazalarViewController: UIViewController ,UIPickerViewDelegate, UIPickerViewDataSource{
+class MagazalarViewController: UIViewController {
     var kattar = [String]()
     var pickerView: UIPickerView!
     var imageArray = [String]()
@@ -30,7 +30,7 @@ class MagazalarViewController: UIViewController ,UIPickerViewDelegate, UIPickerV
         
                       view.addSubview(tableView)
         
-        pickerView = UIPickerView()
+        /*pickerView = UIPickerView()
                 pickerView.delegate = self
                 pickerView.dataSource = self
                 view.addSubview(pickerView)
@@ -44,9 +44,9 @@ class MagazalarViewController: UIViewController ,UIPickerViewDelegate, UIPickerV
                 pickerView.isHidden = true // Başlangıçta gizli olacak
 
                 // Katları seçmek için kullanılacak UIBarButtonItem'i oluşturun
-                let katBarButtonItem = UIBarButtonItem(title: "Kat Seç", style: .plain, target: self, action: #selector(showPickerView))
-                navigationItem.rightBarButtonItem = katBarButtonItem
-        fetchCategories()
+                //let katBarButtonItem = UIBarButtonItem(title: "Kat Seç", style: .plain, target: self, action: #selector(showPickerView))
+                //navigationItem.rightBarButtonItem = katBarButtonItem
+        //fetchCategories()
 
        
         selectedCategoryImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 200)) // 200, seçilen kategori için image view'ın yüksekliğidir, dilediğiniz gibi ayarlayabilirsiniz.
@@ -54,31 +54,33 @@ class MagazalarViewController: UIViewController ,UIPickerViewDelegate, UIPickerV
                selectedCategoryImageView.clipsToBounds = true
                view.addSubview(selectedCategoryImageView)
                selectedCategoryImageView.isHidden = true // Başl
+         */
     }
-    func fetchCategories() {
-         // Firestore sorgusu oluşturun ve kategorileri çekin
-         let db = Firestore.firestore()
-         db.collection("Magazalar").getDocuments { (snapshot, error) in
-             if let error = error {
-                 print("Hata oluştu: \(error)")
-                 return
-             }
-             
-             // Kategorileri dökümandan çekin ve kattar dizisine ekleyin
-             for document in snapshot!.documents {
-                 if let category = document.data()["Number"] as? String {
-                     // Veriyi tekrar etmeden uniqueCategories set'ine ekleyin
-                     self.uniqueCategories.insert(category)
-                 }
-             }
-             
-             // uniqueCategories set'inden kattar dizisini güncelleyin ve sıralayın
-             self.kattar = Array(self.uniqueCategories).sorted()
-             
-             // Kategori verileri güncellendi, UIPickerView'ı yeniden yükleyin
-             self.pickerView.reloadAllComponents()
-         }
-     }
+   /* func fetchCategories() {
+            // Firestore sorgusu oluşturun ve kategorileri çekin
+            let db = Firestore.firestore()
+            db.collection("Magazalar").getDocuments { (snapshot, error) in
+                if let error = error {
+                    print("Hata oluştu: \(error)")
+                    return
+                }
+                
+                // Kategorileri dökümandan çekin ve kattar dizisine ekleyin
+                for document in snapshot!.documents {
+                    if let category = document.data()["Number"] as? String {
+                        // Veriyi tekrar etmeden uniqueCategories set'ine ekleyin
+                        self.uniqueCategories.insert(category)
+                    }
+                }
+                
+                // uniqueCategories set'inden kattar dizisini güncelleyin ve sıralayın
+                self.kattar = Array(self.uniqueCategories).sorted(by: { $0 < $1 }) // Sıralama işlemi eklenmiş
+                
+                // Kategori verileri güncellendi, UIPickerView'ı yeniden yükleyin
+                self.pickerView.reloadAllComponents()
+            }
+        }
+
     @objc func showPickerView() {
          // UIPickerView'ı ekranın altına yerleştirin
          let pickerHeight: CGFloat = 300 // İstediğiniz yüksekliği burada belirleyebilirsiniz
@@ -86,37 +88,39 @@ class MagazalarViewController: UIViewController ,UIPickerViewDelegate, UIPickerV
          pickerView.isHidden = false
      }
     
+    // UIPickerViewDelegate fonksiyonları
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-          if row < kattar.count {
-              return kattar[row]
-          }
-          return nil
-      }
+        if row < kattar.count {
+            return kattar[row]
+        }
+        return nil
+    }
 
-      // UIPickerViewDataSource fonksiyonları
-      func numberOfComponents(in pickerView: UIPickerView) -> Int {
-          return 1 // Tek bir sütun kullanıyoruz
-      }
+    // UIPickerViewDataSource fonksiyonları
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1 // Tek bir sütun kullanıyoruz
+    }
 
-      func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-          return kattar.count
-      }
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return kattar.count
+    }
 
-      // Kullanıcı bir kattı seçtiğinde yapılacak işlemler
-      func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-          if row < kattar.count {
-              selectedKat = kattar[row]
-              // Seçilen katı kullanarak ilgili işlemleri yapabilirsiniz (örneğin, seçilen kattaki mağazaları listeleyebilirsiniz)
-              print("Seçilen kat: \(selectedKat ?? "")")
+    // Kullanıcı bir kattı seçtiğinde yapılacak işlemler
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if row < kattar.count {
+            selectedKat = kattar[row]
+            // Seçilen katı kullanarak ilgili işlemleri yapabilirsiniz (örneğin, seçilen kattaki mağazaları listeleyebilirsiniz)
+            print("Seçilen kat: \(selectedKat ?? "")")
 
-              // Seçilen kategori için image view'ı güncelleyin ve gösterin
-              // Burada "YourImage" yerine seçilen kategoriye göre uygun bir image eklemelisiniz.
-              selectedCategoryImageView.image = UIImage(named: "YourImage")
-              selectedCategoryImageView.isHidden = false
-          }
-          pickerView.isHidden = true // Kullanıcı bir kattı seçtikten sonra UIPickerView'ı gizleyin
-      }
- 
+            // Seçilen kategori için image view'ı güncelleyin ve gösterin
+            // Burada "YourImage" yerine seçilen kategoriye göre uygun bir image eklemelisiniz.
+            selectedCategoryImageView.image = UIImage(named: "YourImage")
+            selectedCategoryImageView.isHidden = false
+        }
+        pickerView.isHidden = true // Kullanıcı bir kattı seçtikten sonra UIPickerView'ı gizleyin
+    }
+
+ */
     func getDataFromFirebase (){
         let fireStoreDatabase = Firestore.firestore()
         

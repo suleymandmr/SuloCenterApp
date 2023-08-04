@@ -8,6 +8,8 @@
 import UIKit
 import MapKit
 import CoreLocation
+import CoreData
+import SideMenu
 class NavigationViewController: UIViewController , MKMapViewDelegate, CLLocationManagerDelegate{
 
     @IBOutlet weak var mapView: MKMapView!
@@ -15,6 +17,10 @@ class NavigationViewController: UIViewController , MKMapViewDelegate, CLLocation
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        guard let mapView = mapView else {
+                print("mapview hatası")
+                return
+            }
         
         let latitude: CLLocationDegrees = 41.001957
         let longitude: CLLocationDegrees = 29.054861
@@ -27,7 +33,7 @@ class NavigationViewController: UIViewController , MKMapViewDelegate, CLLocation
                let region = MKCoordinateRegion(center: locationCoordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
                
                // Haritayı sabitlenmiş konum ile güncelleyin
-               mapView.setRegion(region, animated: true)
+              mapView.setRegion(region, animated: true)
                
                // Konumu haritada göstermek için bir pin oluşturun ve haritaya ekleyin
                let annotation = MKPointAnnotation()
@@ -35,24 +41,6 @@ class NavigationViewController: UIViewController , MKMapViewDelegate, CLLocation
                annotation.title = "Hedef Konum"
                mapView.addAnnotation(annotation)
         
-        
-        
-        
-        
-        
-        
-        
     }
-  
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

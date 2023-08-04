@@ -23,6 +23,7 @@
 		101F5E692A6E8D7400CFAB66 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101F5E682A6E8D7300CFAB66 /* ProfileViewController.swift */; };
 		101F5E6B2A6E93DF00CFAB66 /* NewProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101F5E6A2A6E93DF00CFAB66 /* NewProfileViewController.swift */; };
 		104F05D02A6FED3800D3AF34 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104F05CF2A6FED3800D3AF34 /* Main.swift */; };
+		105BCAC62A7CE8E00012104C /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105BCAC52A7CE8E00012104C /* TestViewController.swift */; };
 		1065B4DE2A77CE9000E1C765 /* SinemaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1065B4DD2A77CE9000E1C765 /* SinemaCell.swift */; };
 		109D82CF2A77C7DC002D264C /* SinemaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109D82CE2A77C7DC002D264C /* SinemaViewController.swift */; };
 		10A75CD02A712BA300CB92D7 /* HakkindaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A75CCF2A712BA300CB92D7 /* HakkindaViewController.swift */; };
@@ -56,6 +57,7 @@
 		101F5E682A6E8D7300CFAB66 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		101F5E6A2A6E93DF00CFAB66 /* NewProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfileViewController.swift; sourceTree = "<group>"; };
 		104F05CF2A6FED3800D3AF34 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		105BCAC52A7CE8E00012104C /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		1065B4DD2A77CE9000E1C765 /* SinemaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinemaCell.swift; sourceTree = "<group>"; };
 		109D82CE2A77C7DC002D264C /* SinemaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinemaViewController.swift; sourceTree = "<group>"; };
 		10A75CCF2A712BA300CB92D7 /* HakkindaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HakkindaViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				101F5E4B2A6E7E7700CFAB66 /* SceneDelegate.swift */,
 				10C72E6C2A7A7ED40081F5F5 /* SideMenuViewController.swift */,
 				101F5E4F2A6E7E7700CFAB66 /* Main.storyboard */,
+				105BCAC52A7CE8E00012104C /* TestViewController.swift */,
 				101F5E552A6E7E7900CFAB66 /* Assets.xcassets */,
 				101F5E572A6E7E7900CFAB66 /* LaunchScreen.storyboard */,
 				101F5E622A6E8C2200CFAB66 /* GoogleService-Info.plist */,
@@ -336,6 +339,7 @@
 				101F5E4E2A6E7E7700CFAB66 /* ViewController.swift in Sources */,
 				100DCC8F2A77BFFC00CD8D8D /* Sinema.swift in Sources */,
 				101F5E4A2A6E7E7700CFAB66 /* AppDelegate.swift in Sources */,
+				105BCAC62A7CE8E00012104C /* TestViewController.swift in Sources */,
 				101F5E6B2A6E93DF00CFAB66 /* NewProfileViewController.swift in Sources */,
 				10B929272A7A37A6003EFE42 /* MagazaCell.swift in Sources */,
 				101F5E4C2A6E7E7700CFAB66 /* SceneDelegate.swift in Sources */,

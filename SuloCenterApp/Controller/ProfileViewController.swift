@@ -23,6 +23,9 @@ class ProfileViewController: UIViewController {
     var about = ["Cinsiyet","Dogum","Eposta","Isim","Sehir","Soyisim","Telefon" ]
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
+        
         initializeHideKeyboard()
         Auth.auth().addStateDidChangeListener { (auth, user) in
             if let user = user {

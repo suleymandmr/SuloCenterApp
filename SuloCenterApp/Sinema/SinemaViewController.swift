@@ -25,8 +25,9 @@ class SinemaViewController: UIViewController {
         
         let hucreGenislik = (genislik-30)/2
         tasarim.itemSize = CGSize(width: hucreGenislik, height: hucreGenislik*1.6)
+         
         
-        collectionView!.collectionViewLayout = tasarim
+       collectionView!.collectionViewLayout = tasarim
         
         fetchRealtimeDatabaseData()
         
@@ -100,7 +101,7 @@ extension SinemaViewController {
                 let next = self.storyboard?.instantiateViewController(withIdentifier: "ParibuVC") as! ParibuVC
                 //next.photoData = photoData
                 //self.present(next, animated: true, completion: nil)
-                self.navigationController?.pushViewController(next, animated: false)
+                self.navigationController?.pushViewController(next, animated: true)
             }
     
 }

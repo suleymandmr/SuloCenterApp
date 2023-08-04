@@ -389,28 +389,28 @@
         <!--Harita-->
         <scene sceneID="LKO-jp-0Do">
             <objects>
-                <viewController id="ek4-xW-izF" customClass="NavigationViewController" customModule="SuloCenterApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NavigationViewController" id="ek4-xW-izF" customClass="NavigationViewController" customModule="SuloCenterApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DNq-0l-a72">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u56-ao-tNS">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="311-vI-7VL">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fxY-Cv-A2U"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="u56-ao-tNS" firstAttribute="leading" secondItem="fxY-Cv-A2U" secondAttribute="leading" id="1wO-Pb-S5e"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="u56-ao-tNS" secondAttribute="bottom" constant="-83" id="AHl-df-z5B"/>
-                            <constraint firstItem="u56-ao-tNS" firstAttribute="centerY" secondItem="DNq-0l-a72" secondAttribute="centerY" id="clx-wf-qub"/>
-                            <constraint firstItem="u56-ao-tNS" firstAttribute="centerX" secondItem="DNq-0l-a72" secondAttribute="centerX" id="gVh-hm-wmt"/>
+                            <constraint firstItem="311-vI-7VL" firstAttribute="top" secondItem="fxY-Cv-A2U" secondAttribute="top" constant="-103" id="2qS-NJ-Zmp"/>
+                            <constraint firstItem="311-vI-7VL" firstAttribute="leading" secondItem="fxY-Cv-A2U" secondAttribute="leading" id="B7E-Y2-UxI"/>
+                            <constraint firstItem="fxY-Cv-A2U" firstAttribute="trailing" secondItem="311-vI-7VL" secondAttribute="trailing" id="NVL-5h-uOa"/>
+                            <constraint firstItem="fxY-Cv-A2U" firstAttribute="bottom" secondItem="311-vI-7VL" secondAttribute="bottom" id="uk1-ip-1HM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Harita" id="IcQ-tU-PZP"/>
                     <connections>
-                        <outlet property="mapView" destination="u56-ao-tNS" id="qQc-6m-3Jy"/>
+                        <outlet property="mapView" destination="311-vI-7VL" id="VhE-D7-Qex"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RAd-Y0-I3N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -678,7 +678,7 @@
         <!--Hakkımızda-->
         <scene sceneID="OMf-ii-Q0a">
             <objects>
-                <viewController id="XwU-UP-dEP" customClass="HakkindaViewController" customModule="SuloCenterApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HakkindaViewController" id="XwU-UP-dEP" customClass="HakkindaViewController" customModule="SuloCenterApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R5h-Af-L4Q">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -741,13 +741,7 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Hakkımızda" id="uzH-Mb-hwG">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="IzT-kk-UOo">
-                            <connections>
-                                <action selector="didTopMenu:" destination="XwU-UP-dEP" id="hVD-18-7aB"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Hakkımızda" id="uzH-Mb-hwG"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="aciklamaLabel" destination="Xlw-Lv-0nK" id="BlY-9q-pP9"/>
@@ -761,7 +755,7 @@
         <!--Profil-->
         <scene sceneID="XCy-FV-y6h">
             <objects>
-                <viewController id="Cb4-pH-hca" customClass="ProfileViewController" customModule="SuloCenterApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" id="Cb4-pH-hca" customClass="ProfileViewController" customModule="SuloCenterApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JHv-BE-4e7">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1000,7 +994,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KOJ-a0-iSa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-792" y="732"/>
+            <point key="canvasLocation" x="-960" y="732"/>
         </scene>
         <!--SuloCenter-->
         <scene sceneID="ycG-Bl-TU6">
@@ -1077,7 +1071,7 @@
         <!--Anasayfa-->
         <scene sceneID="Vpl-EB-NJs">
             <objects>
-                <navigationController storyboardIdentifier="MenuItemCell" automaticallyAdjustsScrollViewInsets="NO" id="6KT-B6-QzW" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6KT-B6-QzW" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Anasayfa" image="homekit" catalog="system" id="Wgo-Yd-Yay"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="crv-HH-KJ3"/>

@@ -20,7 +20,7 @@ class DetayVC: UIViewController {
 
         // ImageView'a Firebase'den alınan resmi atayın
         detayImage.image = image
-
+        detailLabel.isEditable = false
         // Detay Label'ına metni atayın
         detailLabel.text = detailText
         

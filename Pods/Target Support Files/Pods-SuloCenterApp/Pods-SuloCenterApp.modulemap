@@ -1,0 +1,6 @@
+framework module Pods_SuloCenterApp {
+  umbrella header "Pods-SuloCenterApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

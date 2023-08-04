@@ -94,6 +94,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MainCell
         cell.detayLabel.text = subjectArray[indexPath.row]
         cell.detayImageView.sd_setImage(with: URL(string: self.imageArray[indexPath.row]) )
+        cell.setupConstraints()
         return cell
     }
 
